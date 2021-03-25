@@ -23,14 +23,14 @@ interface Person {
 
     function filterPersons(persons: Person[], criteria: any): Person[] {
     // TODO: zaimplementować funkcję, która przefiltruje tablicę persons za pomocą predykatu criteria
-    let filteredPeople = persons.filter((el) => Object.values());
+    let filteredPeople = persons.filter((el) => Object.values(criteria));
     return filteredPeople;
     }
     
     // TODO:
     // 1. Przy pomocy funkcji logPerson wypisać osoby z tablicy users i admins (patrz foreach)
-    users.forEach((tab)=>logPerson(person))
-    admins.forEach((tab)=>logPerson(person))
+    users.forEach((tab)=>logPerson(tab))
+    admins.forEach((tab)=>logPerson(tab))
     // 2. Złączyć tablice users i admins i wypisać zawartość złączonej tablicy na konsoli (patrz operator spread)
     const tab=[...users,...admins]
     tab.forEach(logPerson)
