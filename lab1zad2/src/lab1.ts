@@ -20,15 +20,21 @@ interface Person {
     // TODO: dodać wypisywanie na konsoli danych osoby: "imię nazwisko, wiek, rola"
     console.log(person.name,person.surname,person.age,person.role);
     }
-    
+
     function filterPersons(persons: Person[], criteria: any): Person[] {
     // TODO: zaimplementować funkcję, która przefiltruje tablicę persons za pomocą predykatu criteria
-    return null;
+    let filteredPeople = persons.filter((el) => Object.values());
+    return filteredPeople;
     }
     
     // TODO:
     // 1. Przy pomocy funkcji logPerson wypisać osoby z tablicy users i admins (patrz foreach)
+    users.forEach((tab)=>logPerson(person))
+    admins.forEach((tab)=>logPerson(person))
     // 2. Złączyć tablice users i admins i wypisać zawartość złączonej tablicy na konsoli (patrz operator spread)
+    const tab=[...users,...admins]
+    tab.forEach(logPerson)
     // 3. Wypisać osoby powyżej 25 lat (patrz operator filter)
+    console.log(tab.filter((person) => person.age > 25));
     // 4. Wypisać osoby o imieniu Adam (zaimplementować funkcję filterPersons) -> const filtered = filterPersons(persons, { name: 'Adam' });
-     
+    filterPersons(tab, { name: "Adam" }); 
